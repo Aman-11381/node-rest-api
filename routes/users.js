@@ -32,7 +32,7 @@ router.delete("/:id", async (req, res)=> {
         try {
             await User.findByIdAndDelete(req.params.id);
             res.status(200).json("Account has been deleted successfully.");
-        } catch(err) {
+        }catch(err) {
             res.status(500).json(err);
         }
     } else {
@@ -86,7 +86,7 @@ router.put("/:id/follow", async(req, res)=>{
 
 // unfollow a user
 router.put("/:id/unfollow", async(req, res)=>{
-
+PosPostSchema
     // checking if the current user and the user to unfollow are not same
     if(req.body.userId !== req.params.id) {
         try {
